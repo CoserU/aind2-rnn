@@ -39,7 +39,7 @@ def cleaned_text(text):
     alphabet = list('abcdefghijklmnopqrstuvwxyz')
     new_text = []
     for i in text:
-        if i not in punctuation and i not in alphabet and i!=' ':
+        if i not in punctuation and i not in alphabet:
             new_text.append(' ')
         else:
             new_text.append(i)
