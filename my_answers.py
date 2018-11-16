@@ -46,10 +46,9 @@ def window_transform_text(text, window_size, step_size):
     inputs = []
     outputs = []
     
-    text = np.array(text)
     for i in range(0, len(text)-window_size, step_size):
         inputs.append(text[i:i+window_size])
-    outputs = text[window_size::step_size]
+        outputs.append(text[i+window_size])
     
     return inputs,outputs
 
