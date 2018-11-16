@@ -62,5 +62,5 @@ def window_transform_text(text, window_size, step_size):
 def build_part2_RNN(window_size, num_chars):
     model = Sequential()
     model.add(LSTM(200))
-    model.add(Dense(num_chars), activation='softmax')
+    model.add(Dense(num_chars, activation='softmax'))
     return model
